@@ -15,11 +15,11 @@ def result():
 
       result['Number'] = request.form.get('number')
       
-      result['Major'] = request.form.get('Major')
+      result['Major'] = request.form.get('major')
       
       result['Email'] = request.form.get('email_id') + '@' + request.form.get('email_addr')
 
-      result['Gender'] = request.form.get('Gender')
+      result['Gender'] = request.form.get('gender')
       
       result['languages'] = ', '.join(request.form.getlist('chkbox'))
       
