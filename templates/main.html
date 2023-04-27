@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>main page</title>
+    <script>
+        function validateForm(){
+            var name=document.getElementById('name').value;
+            var StudentNumber=document.getElementById('number').value;
+            var Major=document.getElementById('major').value;
+            var email_id=document.getElementById('email_id').value;
+            var email_addr=document.getElementById('email_addr').value;
+
+            if (!name|| !StudentNumber || !Major || !email_id|| !email_addr){
+                alert('필수 정보를 다 입력해주세요!');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form action='/result' method="POST" onsubmit="return validateForm()">
+        
+        <p><b>* Name</b> <input type="text" id='name'name="name"/> </p>
+        <p><b>* Student Number <input type="text" id='number' name="number"> </p>
+        <p><b> * Major <input type="text" id='major' name ="major"/></p>
+        <p>
+            <b> * Email <input type="email_id" id='email_id' name ="email_id"/>
+            @
+            <input type="email_addr" id='email_addr' name ="email_addr"/>
+        </p>
+        <p>
+            Gender<br><br>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female 
+         </p>
+
+        <p>
+            Programming Languages<br><br>
+            <input type = 'checkbox' name = 'chkbox' value="Python" />Python
+            <input type = 'checkbox' name = 'chkbox'  value="Java"/>Java
+            <input type = 'checkbox' name = 'chkbox'  value="HTML"/>HTML
+            <input type = 'checkbox' name = 'chkbox'  value="C++"/>C++
+        </p>
+        
+        <p><button type = "submit" value = "submit"/>submit</button></p>
+    </form>
+</body>
+</html>
